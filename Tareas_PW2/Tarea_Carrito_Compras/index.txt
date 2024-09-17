@@ -1,0 +1,136 @@
+<div id="objetos_venta">
+        
+            <div class="imagenes_ropa">
+                <img src="IMG/chamarra_1.jpg" alt="">
+                <div class="texto_imagen">
+                    <h2>Fred Perry</h2>
+                    <h4>Chamarra de Vestir</h4>
+                    <h5>$ 5.400.32</h5>
+                </div>
+            </div>
+            <div class="imagenes_ropa">
+                <img src="IMG/chamarra_2.jpg" alt=""> 
+                <div class="texto_imagen">
+                    <h2>Tommy Hilfiger</h2>
+                    <h4>Chamarra de Vestir</h4>
+                    <h5>$ 3.100.12</h5>
+                </div>
+                
+            </div>
+            <div class="imagenes_ropa">
+                <img src="IMG/playera_1.jpg" alt="">
+                <div class="texto_imagen">
+                    <h2>Polo Ralph Lauren</h2>
+                    <h4>Playera de Vestir</h4>
+                    <h5>$ 1.600.86</h5>
+                </div>
+                
+            </div>
+            <div class="imagenes_ropa">
+                <img src="IMG/playera_2.jpg" alt="">
+                <div class="texto_imagen">
+                    <h2>Armani Exchange</h2>
+                    <h4>Playera de Vestir</h4>
+                    <h5>$ 900.12</h5>
+                </div>
+                
+            </div>
+            <div class="imagenes_ropa">
+                <img src="IMG/sueter_1.jpg" alt="">
+                <div class="texto_imagen">
+                    <h2>Polo Ralph Lauren</h2>
+                    <h4>Sueter de Vestir</h4>
+                    <h5>$ 2.500.02</h5>
+                </div>
+            </div>
+            <div class="imagenes_ropa">
+                <img src="IMG/sueter_2.jpg" alt="">
+                <div class="texto_imagen">
+                    <h2>Boss</h2>
+                    <h4>Sueter de Vestir</h4>
+                    <h5>$ 2.900.09</h5>
+                </div>
+            </div>
+            <div class="imagenes_ropa">
+                <img src="IMG/chaleco_1.jpg" alt="">
+                <div class="texto_imagen">
+                    <h2>Polo Ralph Lauren</h2>
+                    <h4>Chaleco de Vestir</h4>
+                    <h5>$ 4.540.32</h5>
+                </div>
+            </div>
+            <div class="imagenes_ropa">
+                <img src="IMG/chaleco_2.jpg" alt="">
+                <div class="texto_imagen">
+                    <h2>Harmont & Blaine</h2>
+                    <h4>Chaleco de Vestir</h4>
+                    <h5>$ 3.356.32</h5>
+                </div>
+            </div>
+            
+
+
+        </div>
+
+
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+#objetos_venta{
+    margin: auto;
+    width: 95vw;
+    height: 140vh;
+    background: transparent;
+    border-bottom: 2px solid #d6020d;
+    border-left: 2px solid #d6020d;
+    border-right: 2px solid #d6020d;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#img_venta{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imagenes_ropa{
+    margin: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.texto_imagen{
+    width: auto;
+    background: #000000;
+}
+
+
+.imagenes_ropa img:hover{
+    transition: 1s ease-in;
+    border-radius: 50px;
+    border: 2px solid #d6020d;
+}
+
+.imagenes_ropa h2{
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.imagenes_ropa h4{
+    color: #fff;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.imagenes_ropa h5{
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
