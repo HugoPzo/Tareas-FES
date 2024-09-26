@@ -4,7 +4,7 @@ const allElements = [
         nombre: "Halo Infinite",
         precio: 1242.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/haloPort.jpg",
+        img: "../IMG_Xbox/haloPort.jpg",
 
     },  
     {
@@ -12,35 +12,35 @@ const allElements = [
         nombre: "Fallout 4",
         precio: 1023.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/falloutPort.jpg",
+        img: "../IMG_Xbox/falloutPort.jpg",
     },
     {
         id: 3,
         nombre: "Modern Warfare 3",
         precio: 502.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/modernWarfare.jpg",
+        img: "../IMG_Xbox/modernWarfare.jpg",
     },
     {
         id: 4,
         nombre: "Halo 5",
         precio: 253.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/halo5Port.jpg",
+        img: "../IMG_Xbox/halo5Port.jpg",
     },
     {
         id: 5,
         nombre: "No Man's Sky",
         precio: 804.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/noMansSky.webp",
+        img: "../IMG_Xbox/noMansSky.webp",
     },
     {
         id: 6,
         nombre: "Bloodborne",
         precio: 952.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/bloodborne.webp",
+        img: "../IMG_Xbox/bloodborne.webp",
 
     },  
     {
@@ -48,35 +48,35 @@ const allElements = [
         nombre: "God of War 'Ragnarok'",
         precio: 1500.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/godofwar.avif",
+        img: "../IMG_Xbox/godofwar.avif",
     },
     {
         id: 8,
         nombre: "The Last of Us",
         precio: 1392.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/lastofus.webp",
+        img: "../IMG_Xbox/lastofus.webp",
     },
     {
         id: 9,
         nombre: "Horizon",
         precio: 420.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/horizon.webp",
+        img: "../IMG_Xbox/horizon.webp",
     },
     {
         id: 10,
         nombre: "Spiderman",
         precio: 985.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/spiderman.avif",
+        img: "../IMG_Xbox/spiderman.avif",
     },
     {
         id: 11,
         nombre: "Mario Kart Deluxe 8",
         precio: 324.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/mariokart.webp",
+        img: "../IMG_Xbox/mariokart.webp",
 
     },  
     {
@@ -84,28 +84,28 @@ const allElements = [
         nombre: "Super Smash Bros",
         precio: 542.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/smashbros.jpg",
+        img: "../IMG_Xbox/smashbros.jpg",
     },
     {
         id: 13,
         nombre: "Zelda 'Breath of the Wild'",
         precio: 634.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/zelda.jpg",
+        img: "../IMG_Xbox/zelda.jpg",
     },
     {
         id: 14,
-        nombre: "Halo 5",
+        nombre: "Pokemon",
         precio: 467.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/pokemon.jpg",
+        img: "../IMG_Xbox/pokemon.jpg",
     },
     {
         id: 15,
-        nombre: "No Man's Sky",
+        nombre: "Super Mario 3",
         precio: 742.23,
         descripcion: "Descrip",
-        img: "/Tareas_Carrito_Juegos/IMG_Xbox/mario.jpg",
+        img: "../IMG_Xbox/mario.jpg",
     },
 ]
 
@@ -226,7 +226,3 @@ const nintendoElements = [
         img: "/Tareas_Carrito_Juegos/IMG_Xbox/mario.jpg",
     },
 ]
-
-
-
-/* CSS */
