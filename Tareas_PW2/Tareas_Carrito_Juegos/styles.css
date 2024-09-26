@@ -1,0 +1,239 @@
+body{
+    margin: 0;
+    background: #ebebeb;
+    font-family: sans-serif;
+}
+
+
+/* Navegation Bar */
+.lista_elementos{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    height: 6vh;
+    background: #edede9;
+    box-shadow: 0 0 10px 0 #000d;
+    border-radius: 0 0 10px 10px;
+}
+
+.logos_navegacion{
+    width: 2em;
+}
+
+.logos_navegacion:hover{
+    width: 2.4em;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#logoNintendo{
+    width: 4em;
+}
+
+#logoNintendo:hover{
+    width: 4.4em;
+    cursor: pointer;
+    cursor: hand;
+}
+
+/* Store Title */
+
+.home_container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+#imagen_carrito{
+    width: 2em;
+}
+
+#imagen_carrito:hover{
+    width: 2.4em;
+}
+
+.home_title{
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.home_title p{
+    text-decoration: none;
+    color: #000d;
+    font-size: 1.7em;
+}
+
+.home_title p:hover{
+    font-size: 1.8em;
+    color: #003459;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+.store_title{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.7em;
+    padding: 15px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+#webTitle:hover{
+    cursor: pointer;
+    font-size: 1.4em;
+}
+
+/* Content Card */
+
+.shop-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+
+.card{
+
+    width: 300px;
+    height: auto;
+    border: 1.5px solid #000; 
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 0 #000;
+    margin: 10px 20px;
+    margin-bottom: 3em;
+    word-wrap: break-word;
+    max-height: max-content;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+.card:hover{
+    min-width: 12vw;
+    height: auto;
+    transition: 0.9s;
+    border: 4px solid #ebebeb;
+    background: #000;
+    color: #ebebeb;
+    box-sizing: border-box;
+}
+
+.card img:hover{
+    border-bottom: 2px solid #ebebeb;
+}
+
+
+.card img, h2, p{
+    margin: 0;
+}
+
+
+.card h2{
+    font-weight: 700;
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.card p{
+    font-weight: 200;
+    margin: 5px 0;
+}
+
+.card img{
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+    height: 400px;
+}
+
+.card button{
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 7em;
+    height: 2.2em;
+}
+
+.imagenes_ropa{
+    width: 100%;
+}
+
+/* Button Style */
+
+.botton_comprar{
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.botton_comprar::after,
+.botton_comprar::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all .4s;
+}
+
+.botton_comprar::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #28282d;
+    border-radius: 10px;
+}
+
+.botton_comprar::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+
+.botton_comprar:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+}
+
+.botton_comprar:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.botton_comprar:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+}
+
+/*  */
