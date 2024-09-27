@@ -36,7 +36,7 @@ function eliminarLibro(evt){
         HtmlCarrito();
     }
 }
-
+    
 
 // Functions
 function leerLibro(libro){

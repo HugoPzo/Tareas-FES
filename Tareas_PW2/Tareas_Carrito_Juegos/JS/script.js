@@ -1,12 +1,19 @@
 const shopContent = document.getElementById("shopContent");
 
-const webtitle = document.getElementById("webTitle")
+const webtitle = document.getElementById("webTitle");
 const xboxLogo = document.querySelector("#logoXbox");
 const playLogo = document.querySelector("#logoPlay");
 const nintendoLogo = document.querySelector("#logoNintendo");
-const homeLogo = document.querySelector("#logoHome")
+const homeLogo = document.querySelector("#logoHome");
 
+const imagCarrito = document.querySelector("#imagen_carrito");
+const shoppingCarrito = document.querySelector("#shoppingCart");
+
+
+// Lista Carrito
 let carrito = [];
+
+// Pagina por defecto
 
 allElements.forEach((product) =>{
 
@@ -38,6 +45,8 @@ allElements.forEach((product) =>{
         
     })
 })
+
+// Eventos Logo 
 
 homeLogo.addEventListener("click", () =>{
 
@@ -235,4 +244,64 @@ nintendoLogo.addEventListener("click", () =>{
 
 });
 
-// Hacer Carritols
+
+// Carrito de Compras ----------------------
+
+imagCarrito.addEventListener("click", showEvent);
+imagCarrito.addEventListener("mouseover", showEvent);
+
+function showEvent(e){
+
+    shoppingCarrito.innerHTML = ``;
+
+    shoppingCarrito.style.display = "flex";
+    
+    const carTitle = document.createElement("div");
+    carTitle.className = "carTitle";
+    carTitle.innerHTML = `
+    <h3 class="titleCar">Carrito</h2>
+    `;
+    shoppingCarrito.append(carTitle);
+
+    const carCloseButton = document.createElement("img");
+    carCloseButton.src = "../IMG_Xbox/cerca.png";
+    carCloseButton.className = "carCloseButton";
+    carTitle.append(carCloseButton);
+
+    carCloseButton.addEventListener("click", () =>{
+        shoppingCarrito.style.display = "none";
+    })
+
+    //imagCarrito.addEventListener("mouseout", () =>{
+    //    shoppingCarrito.style.display = "none";
+    //})
+
+    carrito.forEach((product) => {
+
+        let carritoContent = document.createElement("div");
+        carritoContent.className = "modal-content";
+        carritoContent.innerHTML = `
+            <img src="${product.img}">
+            <h3>${product.nombre}</h3>
+            <p>$${product.precio}</p>
+            <img src="../IMG_Xbox/cerca.png" id="borrarElemento">
+        `;
+
+        shoppingCarrito.append(carritoContent);
+    });
+
+    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+
+    const totalBuying = document.createElement("div");
+    totalBuying.className = "total-content"
+    totalBuying.innerHTML = `Total a Pagar: $${total}`;
+    shoppingCarrito.append(totalBuying);
+
+}
+
+
+    
+
+    
+
+    
