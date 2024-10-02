@@ -209,7 +209,5 @@ function showNintendoItems(){
 }
 
 function showVideo(){
-    if(footer.classList.contains("activo")){
-        
-    }
+    alert("Fasda")
 }
