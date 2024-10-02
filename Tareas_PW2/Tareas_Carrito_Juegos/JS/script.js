@@ -9,6 +9,9 @@ const homeLogo = document.querySelector("#logoHome");
 const imagCarrito = document.querySelector("#imagen_carrito");
 const shoppingCarrito = document.querySelector("#shoppingCart");
 
+const borrarElemento = document.querySelector(".borrar-curso")
+
+
 
 // Lista Carrito
 let carrito = [];
@@ -250,7 +253,7 @@ nintendoLogo.addEventListener("click", () =>{
 imagCarrito.addEventListener("click", showEvent);
 imagCarrito.addEventListener("mouseover", showEvent);
 
-function showEvent(e){
+function showEvent(e){  
 
     shoppingCarrito.innerHTML = ``;
 
@@ -284,11 +287,14 @@ function showEvent(e){
             <img src="${product.img}">
             <h3>${product.nombre}</h3>
             <p>$${product.precio}</p>
-            <img src="../IMG_Xbox/cerca.png" id="borrarElemento">
+            <a href="#" class="borrar-curso"
+            data-id = "${product.id}">(x) </a>
         `;
 
         shoppingCarrito.append(carritoContent);
     });
+
+    
 
     const total = carrito.reduce((acc, el) => acc + el.precio, 0);
 
@@ -297,7 +303,21 @@ function showEvent(e){
     totalBuying.innerHTML = `Total a Pagar: $${total}`;
     shoppingCarrito.append(totalBuying);
 
+
 }
+
+
+
+borrarElemento.addEventListener("click", borrarJuego);
+
+function borrarJuego(e){
+    console.log("fasas");
+}
+
+
+
+
+
 
 
     

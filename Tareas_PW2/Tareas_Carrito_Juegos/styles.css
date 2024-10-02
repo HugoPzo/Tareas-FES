@@ -97,7 +97,7 @@ body{
     color: #003459;
 }
 
-/* Content Card */
+/* Content Cart */
 
 .shop-content{
     display: flex;
@@ -129,8 +129,8 @@ body{
     height: auto;
     transition: 0.9s;
     border: 4px solid #ebebeb;
-    background: #000;
-    color: #ebebeb;
+    background: #ebebeb;
+    color: #000;
     box-sizing: border-box;
 }
 
@@ -161,14 +161,6 @@ body{
     height: 400px;
 }
 
-.card button{
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    width: 7em;
-    height: 2.2em;
-}
-
 .imagenes_ropa{
     width: 100%;
 }
@@ -176,71 +168,55 @@ body{
 /* Button Style */
 
 .botton_comprar{
-    all: unset;
-    width: 100px;
-    height: 30px;
-    font-size: 16px;
-    background: transparent;
-    border: none;
+    --color: #5c0808;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
     position: relative;
-    color: #f0f0f0;
     cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
     z-index: 1;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
 }
 
-.botton_comprar::after,
-.botton_comprar::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    z-index: -99999;
-    transition: all .4s;
+.botton_comprar:before {
+content: "";
+position: absolute;
+z-index: -1;
+background: var(--color);
+height: 150px;
+width: 200px;
+border-radius: 50%;
 }
 
-.botton_comprar::before {
-    transform: translate(0%, 0%);
-    width: 100%;
-    height: 100%;
-    background: #28282d;
-    border-radius: 10px;
+.botton_comprar:hover {
+color: #fff;
 }
 
-.botton_comprar::after {
-    transform: translate(10px, 10px);
-    width: 35px;
-    height: 35px;
-    background: #ffffff15;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 50px;
+.botton_comprar:before {
+top: 100%;
+left: 100%;
+transition: all 0.7s;
 }
 
-.botton_comprar:hover::before {
-    transform: translate(5%, 20%);
-    width: 110%;
-    height: 110%;
+.botton_comprar:hover:before {
+top: -30px;
+left: -30px;
 }
 
-.botton_comprar:hover::after {
-    border-radius: 10px;
-    transform: translate(0, 0);
-    width: 100%;
-    height: 100%;
+.botton_comprar:active:before {
+background: #401d1d;
+transition: background 0s;
 }
 
-.botton_comprar:active::after {
-    transition: 0s;
-    transform: translate(0, 5%);
-}
 
 /* Shopping Cart Style */
 
@@ -257,6 +233,7 @@ body{
     box-sizing: border-box;
     border-radius: 10px 0 10px 10px;
     background: #e7e1e1;
+    z-index: 100;
 }
 
 #shoppingCart:empty{
@@ -300,11 +277,13 @@ body{
     width: 100%;
     margin: 10px;
     margin: 10px, 0;
-
+    z-index: -2;
 }
 
-#borrarElemento{
-    width: 9%;
+.borrar-curso{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em;
 }
 
 .modal-content > img{
