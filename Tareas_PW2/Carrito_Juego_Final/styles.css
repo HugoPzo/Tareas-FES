@@ -111,6 +111,7 @@ body{
 
 .card__item img:hover{
     border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
 }
 
 .card__item img:active{

@@ -20,15 +20,20 @@ let itemsCart = [];
 function appendItems(game){
     let card = document.createElement("div");
     card.className = "card__item";
+
+    let cardIMG = document.createElement("img");
+    cardIMG.setAttribute("src", game.img);
+    
+    console.log(cardIMG);
+    
     card.innerHTML = `
-    <img  src="${game.img}">
     <h3 class="item_element item_name">${game.name}</h3>
     <p class="item_element">${game.descripcion}</p>
     <p class="item_element">$ ${game.precio}</p>
     `
-
+    card.append(cardIMG);
     cardContainer.append(card);
-
+    
     let cardButton = document.createElement("button");
     cardButton.className = "item_element item_button";
     cardButton.innerText = "COMPRAR";
@@ -68,7 +73,7 @@ function appendItems(game){
 
     })
 
-    card.addEventListener("click", () =>{
+    cardIMG.addEventListener("click", () =>{
         showVideo(game);
     })
 }
