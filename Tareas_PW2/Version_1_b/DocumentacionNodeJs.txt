@@ -1,0 +1,47 @@
+- Dentro de un directorio, iniciamos...
+(terminal)
+
+npm init
+npm i express - (No tocar: package-lock.json, node_modules)
+npm i -D nodemon
+
+--- Html -> Pug
+Usar Pug
+npm i pug
+
+-- Carpetas Proyecto
+- config
+- controllers
+- public
+- routes
+- views
+
+- Punto de Entrada 
+"main": index.js -> (Crear archivo 'index.js')
+
+Cambiar/Agregar ->  "type": "module", en package.json para usar 'import'
+
+
+- Correr Servido / Pagina
+-> Editar 'scripts' dentro de package.json
+npm run server
+
+
+
+-----
+Abrir servidor dentro de browser.
+localhost:2800 ****
+
+
+-- Tarea, meter tarea Goku
+Nuevo Proyecto
+
+
+
+
+npm i
+
+ctrl+c -> Matar Puerto
+
+
+Correr una sola terminal
