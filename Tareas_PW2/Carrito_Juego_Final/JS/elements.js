@@ -7,7 +7,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1406.48",
     "cantidad": 1,
-    "video": "https://youtu.be/PyMlV5_HRWk"
+    "video": "https://www.youtube.com/embed/PyMlV5_HRWk"
     },
     {
     "id": 1,
@@ -17,6 +17,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1136.10",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/X5aJfebzkrM"
     },
     {
     "id": 2,
@@ -26,6 +27,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "818.02",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/DZNSOEVJtok"
     },
     {
     "id": 3,
@@ -35,6 +37,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1051.62",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/Rh_NXwqFvHc"
     },
     {
     "id": 4,
@@ -44,6 +47,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "850.15",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/IA8tAWsqYWw"
     },
     {
     "id": 5,
@@ -53,6 +57,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1422.90",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/G203e1HhixY"
     },
     {
     "id": 6,
@@ -62,6 +67,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1388.39",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/pBM2xyco_Kg"
     },
     {
     "id": 7,
@@ -71,6 +77,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1152.68",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/cb6JbxZayVA"
     },
     {
     "id": 8,
@@ -80,6 +87,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1217.88",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/u4-FCsiF5x4"
     },
     {
     "id": 9,
@@ -89,6 +97,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1374.60",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/bgqGdIoa52s"
     },
     {
     "id": 10,
@@ -98,6 +107,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "801.03",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/tKlRN2YpxRE"
     },
     {
     "id": 11,
@@ -107,6 +117,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "948.37",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/WShCN-AYHqA"
     },
     {
     "id": 12,
@@ -116,6 +127,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1378.05",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/ofH5ptn5w-A"
     },
     {
     "id": 13,
@@ -125,6 +137,7 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1222.00",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/lmyH1GKLGvI"
     },
     {
     "id": 14,
@@ -134,5 +147,6 @@ const elements = [
     "descripcion": "DESCRIPCION",
     "precio": "1071.82",
     cantidad: 1,
+    "video": "https://www.youtube.com/embed/5kcdRBHM7kM"
     }
 ]

@@ -289,6 +289,13 @@ body{
     color: #fff;
 }
 
+/* Vaciar Carrito */
+
+.empty__car{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+}
 
 /* Price Items */
 
@@ -318,4 +325,40 @@ body{
 
 .greatings a:hover{
     color: #fff;
+}
+
+/* Video Elements */
+
+.container__video{
+    width: 80vw;
+    height: 75vh;
+    background: #000;
+    z-index: 30;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.video__element{
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+}
+
+.video__element iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.element__button{
+    position: absolute;
+    right: 0;
+    width: 3%;
+    height: 4%;
+
 }

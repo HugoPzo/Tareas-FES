@@ -11,8 +11,8 @@ const xboxLogo = document.querySelector("#img_xbox");
 const playLogo = document.querySelector("#img_playstation");
 const nintendoLogo = document.querySelector("#img_nintendo");
 
-// Footer
-const footer = document.querySelector(".footer")
+// Video
+const videoContainer = document.querySelector(".container__video");
 
 let itemsCart = [];
 
@@ -31,9 +31,9 @@ function appendItems(game){
 
     let cardButton = document.createElement("button");
     cardButton.className = "item_element item_button";
-    cardButton.innerText = "BUTTON";
-    cardButton.innerHTML = `<a class="button_element"><span>Button</span></a> `;
-    
+    cardButton.innerText = "COMPRAR";
+    cardButton.innerHTML = `<a class="button_element"><span>COMPRAR</span></a> `;
+
     card.append(cardButton);
 
     cardButton.addEventListener("click", () => {
@@ -50,7 +50,7 @@ function appendItems(game){
                     return games;
                 }
             });
-            itemsCart = [...juegos] 
+            itemsCart = [...juegos]
         }else{
 
             itemsCart.push({
@@ -69,7 +69,7 @@ function appendItems(game){
     })
 
     card.addEventListener("click", () =>{
-        
+        showVideo(game);
     })
 }
 
@@ -97,7 +97,7 @@ function showCart(evt){
     cartBoxTitle.className = "box__title";
     cartBoxTitle.innerHTML = `
     <h2 class="box--title">CARRITO</h2>`
-    
+
     cartBox.append(cartBoxTitle);
 
     const boxButton = document.createElement("button");
@@ -124,7 +124,7 @@ function showCart(evt){
 
     const boxItemsContainer = document.createElement("div");
     boxItemsContainer.className = "box__itemsContainer";
-    
+
     cartBox.append(boxItemsContainer);
 
     itemsCart.forEach((game) =>{
@@ -142,12 +142,12 @@ function showCart(evt){
         let item__delete = document.createElement("button");
         item__delete.className = "item__delete";
         item__delete.innerText = "X";
-        
+
         box__item.append(item__delete);
 
 
         item__delete.addEventListener("click", ()=>{
-    
+
             while(box__item.firstChild){
                 box__item.removeChild(box__item.firstChild);
             }
@@ -160,6 +160,14 @@ function showCart(evt){
         boxItemsContainer.append(box__item);
     })
 
+    const deleteCart = document.createElement("button");
+    deleteCart.className = "empty__car";
+    deleteCart.innerText = "VACIAR CARRITO";
+    cartBox.append(deleteCart);
+
+    deleteCart.addEventListener("click", () =>{
+        itemsCart = [];
+    });
 
 
     const total = itemsCart.reduce((acc, game) => acc + parseInt(game.precio) * game.cantidad, 0);
@@ -184,7 +192,7 @@ function deleteItems(){
 function showXboxItems(){
     deleteItems();
     elements.forEach((game) =>{
-        if(game.consola === "xbox"){  
+        if(game.consola === "xbox"){
             appendItems(game);
         }
     })
@@ -194,7 +202,7 @@ function showPlayItems(){
     deleteItems();
     elements.forEach((game) =>{
         if(game.consola === "playstation"){
-            appendItems(game);         
+            appendItems(game);
         }
     })
 }
@@ -203,11 +211,31 @@ function showNintendoItems(){
     deleteItems();
     elements.forEach((game) =>{
         if(game.consola === "nintendo"){
-            appendItems(game);         
+            appendItems(game);
         }
     })
 }
 
-function showVideo(){
-    alert("Fasda")
+function showVideo(game){
+    videoContainer.innerHTML = ``;
+    videoContainer.style.position = "fixed";
+    videoContainer.style.display = "flex"
+
+    let video__element = document.createElement("div")
+    video__element.className = "video__element";
+    video__element.innerHTML = `
+    <iframe width="1920" height="763" src="${game.video}" title="Halo Infinite | Campaign Launch Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    `
+    videoContainer.append(video__element);
+
+    let element__button = document.createElement("button");
+    element__button.className = "element__button";
+    element__button.innerText = "X"
+    video__element.append(element__button)
+
+    element__button.addEventListener("click", ()=>{
+        videoContainer.style.display = "none";
+        video__element.remove()
+    })
+
 }
