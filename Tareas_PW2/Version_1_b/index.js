@@ -11,7 +11,6 @@ const app = express();
 
 // Accesos a los datos del formulario
 // Traer datos del formulario
-app.use(express.urlencoded({extended:true}))
 
 // Renderizar las paginas
 // pug -> estilo

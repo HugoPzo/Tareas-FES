@@ -1,0 +1,26 @@
+{
+  "name": "tareagokunjs",
+  "version": "1.0.0",
+  "description": "Tarea Goku NodeJs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node ./index.js",
+    "server": "nodemon index.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "Express",
+    "Nodemon",
+    "Mysql"
+  ],
+  "author": "Hugo Perez Ortiz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

@@ -1,5 +1,5 @@
 import express from "express";
-import { inicio} from "../controllers/inicioController.js";
+import {inicio} from "../controllers/inicioController.js";
 
 // import { inicio, mio} from "../controllers/inicioController.js";
 
