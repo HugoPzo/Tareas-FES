@@ -1,0 +1,23 @@
+-- Examen
+    Concepto Algoritmo 
+    (Ejemplos de costo computacional)
+
+    Ej:
+    Costo compuacional constante O(1) - añadir a una lista, agregar pila, quitar pila
+
+    Orden Lineal O(n) - quitar de una computacional
+
+    - Estudiar Notacion Big(O)
+        Todas sus representaciones(graficas) y Ejemplos
+
+        O(log n) -> busqueda por particion, buscar en un arbol binario, agregar en un arbol binario
+        O(n^2) -> Ordenamiento burbuja
+        O(nlogn) -> QuickSort, Crear un arbol Binario
+
+    - Preguntas
+
+        Logaritmo Caro o Barato?
+
+    - Preguntas Python
+
+        Codigo Implementado

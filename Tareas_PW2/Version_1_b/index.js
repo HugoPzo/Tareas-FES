@@ -5,6 +5,7 @@ import inicio from "./routes/inicio_router.js";
 // import = requires
 
 import express from "express";
+import db from "./config/db.js";
 
 // Crear la aplicacion 
 const app = express();
@@ -29,3 +30,16 @@ const port = 2800;
 app.listen(port, () => {
     console.log("Esperando peticiones en");
 });
+
+
+// Accesos a los datos del formulario
+app.use(express.urlencoded({extended:true}));
+// Conectando a la base de datos
+try{
+    await db.authenticate();
+    db.sync();
+    console.log("Conexion exitosa a la base de datos");
+    
+}catch(error){
+    console.log(error); 
+}

@@ -1,3 +1,15 @@
+i = install
+
+
+Matar Terminal --
+
+    - Fotos Cel
+    **sudo lsof -i :puerto
+    kill -9 PID
+
+
+NODEJS
+
 - Dentro de un directorio, iniciamos...
 (terminal)
 
@@ -45,3 +57,42 @@ ctrl+c -> Matar Puerto
 
 
 Correr una sola terminal
+
+
+
+Clase 2 ---------
+
+-- view terminal - key shortcut
+
+
+Estudiar Bootstrap (Componentes disponibles en Bootstrap)
+ - Copiar css bootstrap
+ - Copiar javascript bootstrap
+
+
+ Base de Datos
+    Instalacion -- 
+
+    *sudo mysql 
+    -> X - Mal
+
+    *mysql -u root -p 
+    -> Configurar MariaDB -> Correcta Conexion
+    *source esquema.sql;
+
+    *npm i sequelize mariadb 
+    -> Dos comandos instalados en un comando
+
+
+    - Como trabaja la informacion? Base de Datos
+        Tabla a Objeto - Hacer Tablas a traves de Objetos (Mapeo)
+            ORM - > Object Relational Map (Estudiar)
+
+            Pool - > Conexiones - no Peticiones
+
+
+    - models -> Nueva Carpeta
+        Relacion de Base de Datos - Indicar mapeo de todas las tablas
+        Como se debe comunicar con las tablas --
+
+    + Privilegios de Root Mysql +
