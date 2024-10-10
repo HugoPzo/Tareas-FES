@@ -4,7 +4,8 @@ i = install
 Matar Terminal --
 
     - Fotos Cel
-    **sudo lsof -i :puerto
+    **sudo lsof -i -> Todos las terminales corriendo
+    **sudo lsof -i :puerto -> Busqueda de puerto por nombreDePuerto
     kill -9 PID
 
 
@@ -74,11 +75,16 @@ Estudiar Bootstrap (Componentes disponibles en Bootstrap)
     Instalacion -- 
 
     *sudo mysql 
-    -> X - Mal
+    -> Esta opcion es incorrecta
 
-    *mysql -u root -p 
+    *sudo mysql -u root -p 
     -> Configurar MariaDB -> Correcta Conexion
+    
     *source esquema.sql;
+    *use nombre_tabla ... Comandos
+
+    (DESC nombre_tabla;) -> Estructura para mostrar la tabla -> Terminar con (;)
+
 
     *npm i sequelize mariadb 
     -> Dos comandos instalados en un comando
@@ -96,3 +102,6 @@ Estudiar Bootstrap (Componentes disponibles en Bootstrap)
         Como se debe comunicar con las tablas --
 
     + Privilegios de Root Mysql +
+
+Ctrl+C -> Salir de DB 
+Ctrl+D -> Salir de MariaDb
