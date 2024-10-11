@@ -1,72 +1,138 @@
 # Documentacion Paginas Web 2
 
-## Chec
+## Terminal 
+
+    i = install
+
+**Instalacion paqueteria npm**
+
+`npm i`
+
+### Comando Version de Node Js
 `node -v`
 
-i = install
+    
+### Matar Terminal
 
+**Revisar puertos (npm) abiertos**
 
-Matar Terminal --
+`ps fea | grep npm`
 
-    - Fotos Cel
-    **sudo lsof -i -> Todos las terminales corriendo
-    **sudo lsof -i :puerto -> Busqueda de puerto por nombreDePuerto
-    kill -9 PID
+**Revisar Puertos Abiertos (todos)**
 
+`sudo lsof -i`
 
-NODEJS
+- Nos proporciona un (PID) el cual ocuparemos para matar la terminal
 
-- Dentro de un directorio, iniciamos...
-(terminal)
+**Matar Terminal**
 
-npm init
-npm i express - (No tocar: package-lock.json, node_modules)
-npm i -D nodemon
+`kill -9 PID`
 
---- Html -> Pug
-Usar Pug
-npm i pug
+**Busqueda especificando el puerto**
 
--- Carpetas Proyecto
+`sudo lsof -i :puerto`
+
+    
+## Node js
+
+> COMO INICIALIZAR UN DIRECTORIO 
+
+### CONFIGURAR UN DIRECTORIO NODE JS (package.json)
+
+**Dentro de un directorio, iniciamos el proyecto Node js...**
+_(TERMINAL)_
+
+**IMPORTANTE -> (No tocar: package-lock.json, node_modules)**
+
+`npm init`
+
+```
+package name: Enter
+version: Enter
+description: Despcripcion
+main: Enter
+git repository: Enter
+
+keywords: 
+    Nodejs
+    Express
+    Nodemon
+    Mysql
+
+author: Autor
+license: Enter
+
+```
+
+`npm i express`  
+
+`npm i -D nodemon`
+
+---
+
+## Html a Pug
+
+>Para este proyecto se usara la tecnologia de pug
+
+`npm i pug`
+
+**_Carpetas Proyecto_**
+
+_Carpetas (OBLIGATORIAS) que se ocuparan para el proyecto_
+
 - config
 - controllers
 - public
 - routes
 - views
 
-- Punto de Entrada 
-"main": index.js -> (Crear archivo 'index.js')
 
-Cambiar/Agregar ->  "type": "module", en package.json para usar 'import'
+## Package.json 
+
+**Punto de Entrada**
+
+**Modificaciones**
+
+![PackajeJson](packagejson.png)
+
+**Crear archivo `index.js` en el directorio principal**
+
+> "main": "index.js"
+
+**Para poder usar import**
+
+> "type": "module"
+
+**Configruar servidor - Agregar a package.json**
+
+```js
+"scripts" :{
+    "start": "node ./index.js"
+    "server": "nodemon index.js"
+},
+```
+>
+
+# Correr Servidor / Pagina (Terminal)
+
+`npm run server`
+
+**Matar el puerto**
+
+`ctrl+c`
+
+> Nota: Se debe matar la terminal, ya que si corremos el servidor en otra terminal, nos mostrara un error -> [¿Cómo matar terminal?](#matar-terminal)
 
 
-- Correr Servido / Pagina
--> Editar 'scripts' dentro de package.json
-npm run server
+
+**El servidor debe ser abierto con el puerto especificado**
+
+Dentro del browser
+
+[Local Host](http://localhost:2800/)
 
 
-
------
-Abrir servidor dentro de browser.
-localhost:2800 ****
-
-
--- Tarea, meter tarea Goku
-Nuevo Proyecto
-
-
-
-
-npm i
-
-ctrl+c -> Matar Puerto
-
-
-Correr una sola terminal
-
-
-
-Clase 2 ---------
+# Clase 2 (Por Terminar)
 
 -- view terminal - key shortcut
 
