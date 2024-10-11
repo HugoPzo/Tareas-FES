@@ -4396,7 +4396,7 @@ textarea.form-control-lg {
   --bs-card-group-margin: 0.75rem;
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   min-width: 0;
   height: var(--bs-card-height);
   color: var(--bs-body-color);

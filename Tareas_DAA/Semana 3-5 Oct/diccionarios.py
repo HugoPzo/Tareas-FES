@@ -17,9 +17,6 @@ alphabet = string.ascii_lowercase
 alpha_dic = {}
 llave = "mansbdvfcgxhzjkploqwietyru"
 
-
-
-
 print(alphabet)
 
 num = 0

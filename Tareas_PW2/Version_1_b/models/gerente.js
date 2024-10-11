@@ -25,7 +25,7 @@ export const Gerente = db.define(
             type: Sequelize.STRING,
         },
         id_htl: {
-            type: Sequelize.STRING.INTEGER,
+            type: Sequelize.INTEGER,
         },
     },
     { timestamps: false}

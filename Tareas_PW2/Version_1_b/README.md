@@ -1,5 +1,7 @@
-Checar version NodeJs
-*node -v
+# Documentacion Paginas Web 2
+
+## Chec
+`node -v`
 
 i = install
 

@@ -21,3 +21,14 @@
     - Preguntas Python
 
         Codigo Implementado
+
+
+-- ¿Como descrifrar?
+
+    texto = "jwqqmfmj" - len(8)
+
+    j - 0, 7
+    m - 4, 6
+    q - 2, 2 
+    w - 1
+    f - 5
