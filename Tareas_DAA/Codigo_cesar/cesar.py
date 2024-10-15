@@ -1,5 +1,5 @@
 def carga_palabras():
-    archivo = open('words.txt', 'r')
+    archivo = open('\\words.txt', 'r')
     renglon = archivo.readline()
     palabras = renglon.split()
     print(len(palabras), 'palabras leidas')
