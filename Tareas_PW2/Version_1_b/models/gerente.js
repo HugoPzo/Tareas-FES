@@ -28,7 +28,7 @@ export const Gerente = db.define(
             type: Sequelize.INTEGER,
         },
     },
-    { timestamps: false}
+    {timestamps: false}
 );
 
 // Foreign Key

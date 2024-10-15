@@ -1,6 +1,7 @@
 import inicio from "./routes/inicio_router.js";
 // Importamos Router Hotel -> Crear Empoints -> Direccion que se agrega a la url para obtener la informacion, etc...
 import router_Hotel from "./routes/hotel_router.js";
+import router_Gerente from "./routes/gerente_router.js";
 
 // CONFIGURACIONES PAGINA
 
@@ -27,7 +28,8 @@ app.use(express.static("public"));
 app.use("/", inicio)
 // Empoint -> Mencion a los routers, 
 app.use("/hotel", router_Hotel);
-
+// Empoint Gerente
+app.use("/gerente", router_Gerente);
 
 // definiendo el puerto -> Puerto de comunicion
 // Se le puede dar >=1024
