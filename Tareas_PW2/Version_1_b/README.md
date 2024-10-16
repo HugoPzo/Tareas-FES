@@ -176,7 +176,7 @@ Estudiar Bootstrap (Componentes disponibles en Bootstrap)
 
     Permiso de Root *
         sudo mysql -u root -p
-        GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIDIED BY '1234';
+        GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY '1234';
         FLUSH PRIVILEGES;
 
 Ctrl+C -> Salir de DB 
@@ -207,3 +207,7 @@ Tarea:
     10 - Oct:
         Insertar Consulta de Gerentes
         Insertar Consulta de Habitaciones
+
+
+
+Configurar SQL
