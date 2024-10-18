@@ -27,7 +27,20 @@ const accionMostrarGerente = async(req, res) => {
 
 };
 
-const accionAltaGerente = async(req, res) => {}
+const accionAltaGerente = async(req, res) => {
+    console.log(req.body);
+
+    // Creamos un nuevo objeto con 'req.body'
+    const gerente = new Gerente(req.body);
+    // Guardamos la informacion
+    await gerente.save();
+    // Renderizamos de nuevo la pagina - pug
+    res.render("gerente/altaGerente", {
+        pagina: "Exito para salvar",
+        info: await consulta()
+    });
+
+}
 
 // Exportamos la Funcion
 export {accionMostrarGerente, accionAltaGerente};

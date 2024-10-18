@@ -13,6 +13,19 @@ import db from "./config/db.js";
 // Crear la aplicacion 
 const app = express();
 
+// El acceso debe llamarse despues de abrir el servidor
+// Accesos a los datos del formulario
+app.use(express.urlencoded({extended:true}));
+// Conectando a la base de datos
+try{
+    await db.authenticate();
+    db.sync();
+    console.log("Conexion exitosa a la base de datos");
+    
+}catch(error){
+    console.log(error); 
+}
+
 // Accesos a los datos del formulario
 // Traer datos del formulario
 
@@ -39,14 +52,3 @@ app.listen(port, () => {
 });
 
 
-// Accesos a los datos del formulario
-app.use(express.urlencoded({extended:true}));
-// Conectando a la base de datos
-try{
-    await db.authenticate();
-    db.sync();
-    console.log("Conexion exitosa a la base de datos");
-    
-}catch(error){
-    console.log(error); 
-}

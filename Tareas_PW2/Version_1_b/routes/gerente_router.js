@@ -7,7 +7,7 @@ const router_Gerente = express.Router();
 
 
 // Consulta de Gerentes -> Ruta de Gerentes
-router_Gerente.get("/mostrarGerentes", accionMostrarGerente);
-router_Gerente.post("/altaGerente",accionAltaGerente);
+router_Gerente.get("/verGerente", accionMostrarGerente);
+router_Gerente.post("/altaGerente", accionAltaGerente);
 
 export default router_Gerente;
