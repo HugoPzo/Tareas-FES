@@ -211,3 +211,25 @@ Tarea:
 
 
 Configurar SQL
+
+
+
+Jueves - Carrito de Compras, Base de Datos
+        Interfaz Node-Js
+
+
+Carrito de Compra - Para el Jueves - Pre
+
+
+http -> No guarda sesiones, solo muestra
+
+
+
+Variables de Sesion
+
+Instalar 
+
+npm install express-session
+
+
+Ver fotos y usar variables de sesion

@@ -2,7 +2,7 @@ import inicio from "./routes/inicio_router.js";
 // Importamos Router Hotel -> Crear Empoints -> Direccion que se agrega a la url para obtener la informacion, etc...
 import router_Hotel from "./routes/hotel_router.js";
 import router_Gerente from "./routes/gerente_router.js";
-
+import session from "express-session";
 // CONFIGURACIONES PAGINA
 
 // import = requires
@@ -26,6 +26,7 @@ try{
     console.log(error); 
 }
 
+
 // Accesos a los datos del formulario
 // Traer datos del formulario
 
@@ -43,6 +44,16 @@ app.use("/", inicio)
 app.use("/hotel", router_Hotel);
 // Empoint Gerente
 app.use("/gerente", router_Gerente);
+
+
+//  Variables de Sesion
+app.use(session({
+    secret: 'secreto de cadena',
+    resave: false, // La sesion no se quedara en cada peticion
+    saveUninitialized: false // Asegura que no se guarde una 
+}))
+
+
 
 // definiendo el puerto -> Puerto de comunicion
 // Se le puede dar >=1024

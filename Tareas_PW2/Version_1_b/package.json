@@ -17,7 +17,10 @@
   "author": "Hugo Perez Ortiz",
   "license": "ISC",
   "dependencies": {
+    "connect": "^3.7.0",
+    "cookie-parser": "^1.4.7",
     "express": "^4.21.0",
+    "express-session": "^1.18.1",
     "mariadb": "^3.3.2",
     "pug": "^3.0.3",
     "sequelize": "^6.37.4"

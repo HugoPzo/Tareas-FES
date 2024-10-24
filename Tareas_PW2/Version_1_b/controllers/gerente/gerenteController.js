@@ -34,6 +34,7 @@ const accionAltaGerente = async(req, res) => {
     const gerente = new Gerente(req.body);
     // Guardamos la informacion
     await gerente.save();
+    
     // Renderizamos de nuevo la pagina - pug
     res.render("gerente/altaGerente", {
         pagina: "Exito para salvar",
