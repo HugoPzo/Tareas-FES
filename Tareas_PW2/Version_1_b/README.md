@@ -233,3 +233,31 @@ npm install express-session
 
 
 Ver fotos y usar variables de sesion
+
+
+Equipo - 5 **
+
+EN CUALQUIER PROYECTO SE REALIZA PRIMERO LA BASE DE DATOS
+
+Base de Datos para Proyecto Final
+
+Base de Datos Videojuegos (1 MES)
+
+    Roles 1 - N Usuario (PRIMERA SEMANA)
+
+    Usuario 1 - N Carrito 
+
+    Usuario 1 - N Forma_pago
+
+    Forma_pago 1 - 1 Carrito
+
+    Carrito 1 - N Carrito_videojuego
+
+    Carrito_Videojuego N - 1 Videojuego
+
+    Videojuego 1 - N Videojuego_plataforma (SEGUNDA SEMANA) - SIGUIENTE SEMANA (29 - 31 Octubre)
+ 
+    Videojuego_Plataforma N - 1 Plataforma (SEGUNDA SEMANA)
+
+    
+

@@ -1,3 +1,4 @@
+//- name = nombre_en_base_de_datos
 extends ../layout/index.pug
 block cuerpoContenido
     h1.text-center=pagina
@@ -17,7 +18,6 @@ block cuerpoContenido
                             option(value=datos.dato1 selected) #{datos.dato2}
                 div(class="mb-1")
                     label(for="nombre" class="form-label") Nombre                               
-                                                                                                    //- name = nombre_en_base_de_datos
                     input#nombre(class="form-control" type="text" placeholder="Nombre del Gerente" name="nombre" value=dato?dato.nombre:'')
                 div(class="mb-1")
                     label(for="apaterno" class="form-label") Apellido Paterno

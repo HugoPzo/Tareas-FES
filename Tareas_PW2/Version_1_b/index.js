@@ -16,6 +16,8 @@ const app = express();
 // El acceso debe llamarse despues de abrir el servidor
 // Accesos a los datos del formulario
 app.use(express.urlencoded({extended:true}));
+
+
 // Conectando a la base de datos
 try{
     await db.authenticate();
