@@ -1,75 +1,68 @@
 from string import ascii_lowercase
 
 def carga_palabras():
+    file = open("words.txt", "r")
+    lines = file.readline().split()
+    print(f"{len(lines)} Palabras leidas...")
+    return lines
 
-    archivo = open("words.txt", "r")
-    renglon = archivo.readline()
-    palabras = renglon.split()
 
-    return palabras
+def probar_palabra():
+    #dkc. fxn fvo fd fdvlo xs uc; nfvc ndld cx jd fue oqcude; nfvc edkldc uheclqkcuxhe fvo fd ldkdurdo; nfvc nve uc vpp vjxqc? fd vhendldo cfvc fd ouo hxc thxn. fd fvo hx edkldc uheclqkcuxhe. fd nve v ekfxpvl vho v mvcfdmvcukuvh. fd fvo hx uhcdldec uh axpucuke. vho suhvppb cfd zdhcpd uhyqueucxl vetdo, "nfdh nupp clvhcxl jd odeclxbdo?" zvvp svpcdldo, "u kxqpo hxc evb xs mb xnh thxnpdozd." "kxqpo bxq evb xs vhbxhd'e?" "fxn kxqpo u eadvt sxl vhxcfdl?" fd sdpc nvlm; xrdlnvlm. cfd uhyqueucxl evuo, "fve vhbxhd cxpo bxq xs eqkf odeclqkcuxh; edc v ovcd?" vho, ve cfd bxqhz mvh fdeucvcdo, fd ndhc xh, "bxq fvrd jddh sxppxndo, oxkcxl. nd ndld vc cfd vulaxlc nfdh bxq vllurdo; xh cfd xjedlrvcuxh cxndl nfdh bxq
 
-def carga_palabras_cifrado():
-
-    archivo = open('PerezOrtizHugo.txt', 'r')
-    renglon = archivo.readline()
-    palabras_cifrado = renglon.split()
-
-    return palabras_cifrado
-
-def carga_diccionario(text):
-    alphabet = ascii_lowercase
-    dic_alp = {}
-
-    for letter in alphabet:
-        dic_alp[letter] = 0
-
-    for c in text:
-        if c in dic_alp:
-            dic_alp[c] += 1
-
-    return dic_alp
-    
-
-def main ():
-    PALABRAS = carga_palabras()
-    PALABRAS_CIFRADAS = carga_palabras_cifrado()
-
+    words = carga_palabras()
     word_dict = []
-    # word = "ouo"
-    # word = "vllurdo"
-    # word = "clvhcxl"
-    # word = "jddh"
-    # word = "vpp"
-    # word = "sxppxndo"
-    # word = "fd"
-    word = "fve"
+    word = "uc"
+    #       ut
 
-    for i in PALABRAS:
-        if len(i) == len(word):
-            if i[0] != i[-1]:
-                if i[0] == "a":
-                    if i[1] == "o":
-                        word_dict.append(i)
-
-
-
-            # if i[0] == i[4]:
-            #     if i[1] == i[-1]:
-            #         if i[-1] != i[-2]:
-            #             if i[1] != i[2]:
-            #                 if i[3] != i[4]:
-            #                     if i[-2] != i[-3]:
-            #                         if i[1] != i[3]:
-                                
-                                        
-
-    print(word_dict)
-
-    word_di = ""
-    resultado = word_di.join(word_dict)
-    print(carga_diccionario(resultado))
-    print(f"{len(word_dict)} posiblidades...")
+    for w in words:
+        if len(word) == len(w):
+            if w[0] != w[-1]:
+                if w[1] == "t":
+                    word_dict.append(w)
     
+    return print(word_dict), print(f"{len(word_dict)} posibilidades.")
+
+
+def carga_cifrado():
+    file = open("PerezOrtizHugo.txt", "r")
+    lines = file.readline()
+    return lines
+
+def carga_diccionario():
+    
+    # Palabra clave = "clvhcxl" -> trantor
+    # "clvhcxl" = ['athwart', 'eschews', 'granger', 'marimba', 'prosper', 'remorse', 'tractor', *'traitor']    
+    
+    dictionary_alphabet = {'a': 'p', 'b': "y", 'c': "t", 'd': "e", 'e': "s", 'f': "h", 'g': "g", 'h': 'n', 'i': "i", 'j': "b", 'k': "c", 'l': "r", 'm': "m", 'n': "w", 'o': "d", 'p': "l", 'q': "u", 'r': 'v', 's': "f", 't': 'k', 'u': "i", 'v': "a", 'w': 'w', 'x': "o", 'y': "q", 'z': "g"}
+
+
+    return dictionary_alphabet
+
+
+def cifrar_mensaje(texto_cifrado, diccionario):
+    alphabet = ascii_lowercase
+    texto_descifrado = ""
+    
+    for palabra in texto_cifrado:
+        if palabra in alphabet:
+            if diccionario[palabra] == "0":
+                texto_descifrado += palabra
+            else:
+                texto_descifrado += diccionario[palabra]
+        else:
+            texto_descifrado += palabra
+
+    return texto_descifrado
+
+
+def main():
+    crypted_text = carga_cifrado()
+    words_dictionary = carga_diccionario()
+    probar_palabra()
+
+    texto_descrifrado = cifrar_mensaje(crypted_text, words_dictionary)
+    print(texto_descrifrado)
 
 
 if __name__ == "__main__":

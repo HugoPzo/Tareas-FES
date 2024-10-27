@@ -2,6 +2,8 @@
 
 ## Terminal 
 
+    view terminal - key shortcut (Open Current Terminal)
+    
     i = install
 
 **Instalacion paqueteria npm**
@@ -127,50 +129,62 @@ _Carpetas (OBLIGATORIAS) que se ocuparan para el proyecto_
 
 **El servidor debe ser abierto con el puerto especificado**
 
-Dentro del browser
+En este caso el puerto es :2800
 
 [Local Host](http://localhost:2800/)
 
 
-# Clase 2 (Por Terminar)
-
--- view terminal - key shortcut
-
+# Base de Datos
 
 Estudiar Bootstrap (Componentes disponibles en Bootstrap)
  - Copiar css bootstrap
  - Copiar javascript bootstrap
 
 
- Base de Datos
-    Instalacion -- 
+## Instalacion 
 
-    *sudo mysql 
-    -> Esta opcion es incorrecta
+> Esta opcion es incorrecta
 
-    *sudo mysql -u root -p 
-    -> Configurar MariaDB -> Correcta Conexion
+`sudo mysql`
+
+> Opcion correcta
+
+`sudo mysql -u root -p`
+
+
+## Configuracion MariaDB -> Correcta Conexion
     
-    *source esquema.sql;
-    *use nombre_tabla ... Comandos
+`npm i sequelize mariadb`
 
-    (DESC nombre_tabla;) -> Estructura para mostrar la tabla -> Terminar con (;)
+> Dos comandos instalados en un comando
+
+- npm i sequelize
+- npm i mariadb
+
+`source esquema.sql`
+
+- use nombre_tabla ... Comandos
+
+    <!-- Estructura para mostrar la tabla -> Terminar con (;) -->
+
+**Como trabaja la informacion? Base de Datos**
+        
+- Tabla a Objeto - Hacer Tablas a traves de Objetos (Mapeo)
+- ORM - > Object Relational Map (Estudiar)
+- Pool - > Conexiones - no Peticiones
+
+**Carpeta Base de Datos de Instancias**
+
+> Nombre Carpeta -> (models)
+
+_En este casi dentro de la carpeta crear los modelos_
+
+- _Gerente_
+- _Hotel_
 
 
-    *npm i sequelize mariadb 
-    -> Dos comandos instalados en un comando
-
-
-    - Como trabaja la informacion? Base de Datos
-        Tabla a Objeto - Hacer Tablas a traves de Objetos (Mapeo)
-            ORM - > Object Relational Map (Estudiar)
-
-            Pool - > Conexiones - no Peticiones
-
-
-    - models -> Nueva Carpeta
-        Relacion de Base de Datos - Indicar mapeo de todas las tablas
-        Como se debe comunicar con las tablas --
+Relacion de Base de Datos - Indicar mapeo de todas las tablas
+Como se debe comunicar con las tablas --
 
     + Privilegios de Root Mysql +
 
