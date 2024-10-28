@@ -78,19 +78,19 @@ arregloCosas.append(Cosas('Silla',240,12,0))
 arregloCosas.append(Cosas('TELEFONO',20,1,0))
 arregloCosas.append(Cosas('Xbox',369,15,0))
 arregloCosas.append(Cosas('florero',50,2,0))
-# arregloCosas.append(Cosas('Luces',50,2,0))
-# arregloCosas.append(Cosas('Estereo',340,13,0))
-# arregloCosas.append(Cosas('Celular Nokia',28,1,0))
-# arregloCosas.append(Cosas('Guitarra',450,16,0))
-# arregloCosas.append(Cosas('Wii',346,12,0))
-# arregloCosas.append(Cosas('Sombrero',60,2,0))
-# arregloCosas.append(Cosas('reloj',110,3,0))
-# arregloCosas.append(Cosas('VAJILLA',160,4,0))
-# arregloCosas.append(Cosas('Los relojes Blandos. Dalí',250,6,0))
-# arregloCosas.append(Cosas('Calendario Maya',456,9,0))
-# arregloCosas.append(Cosas('DVD',110,2,0))
-# arregloCosas.append(Cosas('Busto Platón',300,10,0))
-# arregloCosas.append(Cosas('Adorno',70,3,0))
+arregloCosas.append(Cosas('Luces',50,2,0))
+arregloCosas.append(Cosas('Estereo',340,13,0))
+arregloCosas.append(Cosas('Celular Nokia',28,1,0))
+arregloCosas.append(Cosas('Guitarra',450,16,0))
+arregloCosas.append(Cosas('Wii',346,12,0))
+arregloCosas.append(Cosas('Sombrero',60,2,0))
+arregloCosas.append(Cosas('reloj',110,3,0))
+arregloCosas.append(Cosas('VAJILLA',160,4,0))
+arregloCosas.append(Cosas('Los relojes Blandos. Dalí',250,6,0))
+arregloCosas.append(Cosas('Calendario Maya',456,9,0))
+arregloCosas.append(Cosas('DVD',110,2,0))
+arregloCosas.append(Cosas('Busto Platón',300,10,0))
+arregloCosas.append(Cosas('Adorno',70,3,0))
 
 
 
@@ -102,28 +102,27 @@ print ("Probando con busqueda exahustiva")
 maximo = 0
 mejorCombina = 0
 
-for i in arregloCosas:
-    inicio = time.time()
 
-    for c in range(pow(2,len(arregloCosas))):
-        obtenido = evalua(c, arregloCosas, 20)    
-        if obtenido >= maximo:
-            maximo = obtenido
-            mejorCombina = c
+inicio = time.time()
 
-    fin = time.time()
-    tiempo = fin-inicio
+for c in range(pow(2,len(arregloCosas))):
+    obtenido = evalua(c, arregloCosas, 20)    
+    if obtenido >= maximo:
+        maximo = obtenido
+        mejorCombina = c
 
-    tiempos.append(tiempo)
-    print(tiempos)
+fin = time.time()
+tiempo = fin-inicio
+
+tiempos.append(tiempo)
 
 imprimeCombinacion(mejorCombina)
 print("tiempo requerido = ", tiempo, " segundos")
 
 # ---------------------------------------------------
 
-plt.plot( range(len(arregloCosas)), tiempos)
-plt.show()
+# plt.plot( range((len(arregloCosas))), tiempos)
+# plt.show()
 
 ## Fin de la búsqueda exhaustiva
 
