@@ -1,5 +1,7 @@
 # -*- coding: cp1252 -*-
 import time
+import matplotlib.pyplot as plt
+
 class Cosas():
     nombre = ""
     precio = 0
@@ -41,7 +43,7 @@ def imprimeCombinacion(num):
     cad = cad.rjust(len(arregloCosas))
     cad = cad.replace(" ","0")
     print()
-    print ("           La mejor combinacion es   ")
+    print ("--La mejor combinacion es--")
     print ("objeto  Precio    peso")    
     for l in cad:
         if l == "1":
@@ -74,7 +76,7 @@ arregloCosas.append(Cosas('Maleta',100,5,0))
 arregloCosas.append(Cosas('Radio',180,9,0))
 arregloCosas.append(Cosas('Silla',240,12,0))
 arregloCosas.append(Cosas('TELEFONO',20,1,0))
-##arregloCosas.append(Cosas('Xbox',369,15,0))
+# arregloCosas.append(Cosas('Xbox',369,15,0))
 ##arregloCosas.append(Cosas('florero',50,2,0))
 #arregloCosas.append(Cosas('Luces',50,2,0))
 ##arregloCosas.append(Cosas('Estereo',340,13,0))
@@ -91,7 +93,9 @@ arregloCosas.append(Cosas('TELEFONO',20,1,0))
 ##arregloCosas.append(Cosas('Adorno',70,3,0))
 
 
+
 ## Esta parte corresponde a la búsqueda exhaustiva
+tiempos = []
 inicio = time.time()
 print ("Probando con búsqueda exahustiva")
 maximo = 0
@@ -101,9 +105,27 @@ for c in range(pow(2,len(arregloCosas))):
     if obtenido > maximo:
         maximo = obtenido
         mejorCombina = c
-imprimeCombinacion(mejorCombina)
+
 fin = time.time()
 tiempo = fin-inicio
+
+tiempos.append(tiempo)
+
+print(tiempos)
+
+imprimeCombinacion(mejorCombina)
 print("tiempo requerido = ", tiempo, " segundos")
+
+cantidadCosas = []
+for i in range(len(arregloCosas)):
+    cantidadCosas.append(i)
+
+plt.plot(cantidadCosas)
+plt.show()
+
+plt.plot(tiempos)
+plt.show()
+
+
 ## Fin de la búsqueda exhaustiva
 

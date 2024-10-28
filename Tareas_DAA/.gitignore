@@ -1,3 +1,8 @@
 **/misc.xml
 **/modules.xml
 **/workspace.xml
+*/profiles_settings.xml
+**/vcs.xml
+**/Project_Default.xml
+**/*.xml
+**/*.iml

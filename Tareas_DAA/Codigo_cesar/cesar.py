@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 def carga_palabras():
     archivo = open('\\words.txt', 'r')
     renglon = archivo.readline()
