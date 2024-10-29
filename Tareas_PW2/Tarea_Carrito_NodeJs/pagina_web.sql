@@ -56,12 +56,15 @@ CREATE TABLE plataforma(
     PRIMARY KEY(id_plataforma)
 );
 
+
 CREATE TABLE videojuego(
     id_videojuego   INT NOT NULL AUTO_INCREMENT,
     titulo          varchar(50) NOT NULL,
     imagen          varchar(255) NOT NULL,
     trailer         varchar(255) NOT NULL,
-    
+    costo       	INT,
+    precio      	INT,
+	
     PRIMARY KEY(id_videojuego)
 );
 
@@ -69,9 +72,6 @@ CREATE TABLE videojuego_plataforma(
     id_plataforma	INT,
     id_videojuego	INT,
     stock       	INT,
-    costo       	INT,
-    precio      	INT,
-    
     
     FOREIGN KEY(id_plataforma) REFERENCES plataforma(id_plataforma),
     FOREIGN KEY(id_videojuego) REFERENCES videojuego(id_videojuego)
@@ -86,19 +86,30 @@ CREATE TABLE pedido_videojuego(
 );
 
 
-# Usuario -----------------
-SHOW TABLES;
-DESC roles;
-DESC usuario;
+# Insertando Datos
 
-# Pago --------------
-DESC pago;
+# Roles
+INSERT INTO roles(tipo) VALUES
+("Administrador"),
+("Usuario");
 
-# Pedido ---------------
-DESC pedido;
-DESC pedido_videojuego;
+# Plataforma 
+INSERT INTO plataforma(nombre) VALUES
+("Xbox"),
+("PlayStation"),
+("Nintendo");
 
-# Videojuegos --------------
-DESC videojuego;
-DESC plataforma;
-DESC videojuego_plataforma;
+# USUARIO
+INSERT INTO usuario (nombre, ap_materno, ap_paterno, correo, telefono, username, id_rol) VALUES
+('Juan', 'Pérez', 'García', 'juan.perez@gmail.com', '5551234567', 'juanp', 1),
+('María', 'López', 'Hernández', 'maria.lopez@yahoo.com', '5552345678', 'mlopez', 1),
+('Carlos', 'Sánchez', 'Martínez', 'carlos.sanchez@hotmail.com', '5553456789', 'carloss', 1),
+('Ana', 'Gómez', 'Jiménez', 'ana.gomez@outlook.com', '5554567890', 'anag', 1),
+('Luis', 'Ramírez', 'Flores', 'luis.ramirez@gmail.com', '5555678901', 'luisrf', 1),
+('Elena', 'Torres', 'Reyes', 'elena.torres@yahoo.com', '5556789012', 'elenat', 1),
+('Javier', 'Morales', 'Cruz', 'javier.morales@hotmail.com', '5557890123', 'javierm', 1),
+('Sofía', 'Vásquez', 'Salinas', 'sofia.vasquez@outlook.com', '5558901234', 'sofiav', 2);
+
+
+
+
