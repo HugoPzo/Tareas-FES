@@ -84,6 +84,7 @@ CREATE TABLE pedido_videojuego(
     FOREIGN KEY(id_pedido) REFERENCES pedido(id_pedido),
     FOREIGN KEY(id_videojuego) REFERENCES videojuego(id_videojuego)
 );
+<<<<<<< Updated upstream
 
 
 # Usuario -----------------
@@ -102,3 +103,5 @@ DESC pedido_videojuego;
 DESC videojuego;
 DESC plataforma;
 DESC videojuego_plataforma;
+=======
+>>>>>>> Stashed changes
