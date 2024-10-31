@@ -3,6 +3,7 @@ import inicio from "./routes/inicio_router.js";
 import router_Hotel from "./routes/hotel_router.js";
 import router_Gerente from "./routes/gerente_router.js";
 import session from "express-session";
+import credenciales_router from "./routes/credenciales_router.js";
 // CONFIGURACIONES PAGINA
 
 // import = requires
@@ -40,12 +41,17 @@ app.set("views", "./views");
 // carpeta publica (Acceso de Usuario)
 app.use(express.static("public"));
 
-// routing -> Ruta por default
-app.use("/", inicio)
-// Empoint -> Mencion a los routers, 
-app.use("/hotel", router_Hotel);
-// Empoint Gerente
-app.use("/gerente", router_Gerente);
+
+app.use("/", credenciales_router);
+app.use("/hotel",router_Hotel);
+app.use("/gerente",router_Gerente);
+
+// // routing -> Ruta por default
+// app.use("/", inicio)
+// // Empoint -> Mencion a los routers, 
+// app.use("/hotel", router_Hotel);
+// // Empoint Gerente
+// app.use("/gerente", router_Gerente);
 
 
 //  Variables de Sesion

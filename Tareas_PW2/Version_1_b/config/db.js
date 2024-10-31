@@ -1,27 +1,20 @@
-// Conexion a Base de Datos 
-
-// Importamos 'Sequileze' se conecta a la base de datos 
-// aquire:ms (milisegundos)
 import { Sequelize } from "sequelize";
-                // Creamos un nuevo objeto de Sequileze, y le damos sus atributos
-                // Base de Datos, Usuario, Password
-const db = new Sequelize('hoteles', 'root', "1234", {
-    dialect:'mariadb', // Comunicacion
+import dotenv from 'dotenv';
+dotenv.config({path:'.env'});
+const db=new Sequelize( process.env.BD_NOMBRE,process.env.BD_USUARIO,process.env.BD_CLAVE,{
+    dialect:process.env.BD_DIALEC,
     dialectOptions:{
-        host:'127.0.0.1',
-        port: '3306',
-        timestamps:false,
-        underscore:false,
-        pool:{
-            // Maximo & Minimo de conexiones
-            max:5, 
-            min:0,
-            aquire:30000, // Milisegundos
-            idle:10000
-        },
-
-        operatorAlies:false
-    }
+    host:process.env.BD_HOST,
+    port:process.env.BD_PORT,
+    timestamps:false,
+    underscore:false,
+    pool:{
+        max:5,
+        min:0,
+        acquire:30000,
+        idle:10000
+    },
+operatorAlies:false
+}
 });
-
 export default db;

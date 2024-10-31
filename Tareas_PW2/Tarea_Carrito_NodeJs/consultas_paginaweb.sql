@@ -45,3 +45,9 @@ DESC pedido_videojuego;
 DESC videojuego;
 DESC plataforma;
 DESC videojuego_plataforma;
+
+
+# Consultas
+SELECT * FROM roles;
+SELECT * FROM usuario;
+SELECT * FROM videojuego;

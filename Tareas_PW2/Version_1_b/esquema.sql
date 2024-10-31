@@ -23,7 +23,6 @@ id_htl						INTEGER,
 PRIMARY KEY(id_grt),
 CONSTRAINT Ya_hay_hotel_con_ese_gerente UNIQUE(id_htl),
 FOREIGN KEY(id_htl) REFERENCES hoteles(id_htl)
-
 )DEFAULT CHARACTER SET UTF8MB4;
 
 
@@ -39,25 +38,53 @@ FOREIGN KEY(id_htl) REFERENCES hoteles(id_htl)
 
 
 CREATE TABLE misdatos(
-id						    INTEGER NOT NULL AUTO_INCREMENT,
-dato1						VARCHAR(255) NOT NULL,
-dato2						VARCHAR(255) NOT NULL,
-dato3						VARCHAR(255) NOT NULL,
-dato4						VARCHAR(255) NOT NULL,
-dato5						VARCHAR(255) NOT NULL,
-
+id						INTEGER NOT NULL AUTO_INCREMENT,
+dato1					VARCHAR(255) NOT NULL,
+dato2					VARCHAR(255) NOT NULL,
+dato3					VARCHAR(255) NOT NULL,
+dato4					VARCHAR(255) NOT NULL,
+dato5					VARCHAR(255) NOT NULL,
 PRIMARY KEY(id)
 )DEFAULT CHARACTER SET UTF8MB4;
+
+CREATE TABLE roles(
+id_rls					INTEGER NOT NULL AUTO_INCREMENT,
+nombre					VARCHAR(40) NOT NULL,
+PRIMARY KEY(id_rls)
+)DEFAULT CHARACTER SET UTF8MB4;
+
+CREATE TABLE usuarios(
+id_usr					INTEGER NOT NULL AUTO_INCREMENT,
+nombre					VARCHAR(40) NOT NULL,
+correo					VARCHAR(30) NOT NULL UNIQUE,
+password				VARCHAR(70) NOT NULL UNIQUE,
+confirmar				tinyint(1) 	DEFAULT 0,
+token					VARCHAR(50) NOT NULL,
+id_rls					INTEGER NOT NULL,
+PRIMARY KEY(id_usr),
+FOREIGN KEY(id_rls) REFERENCES roles(id_rls)
+)DEFAULT CHARACTER SET UTF8MB4;
+
 
 DELETE FROM hoteles;
 DELETE FROM habitaciones;
 DELETE FROM gerentes;
 DELETE FROM misdatos;
+DELETE FROM usuarios;
+DELETE FROM roles;
+
 
 alter table gerentes auto_increment=1;
 alter table hoteles auto_increment=1;
 alter table habitaciones auto_increment=1;
 alter table misdatos auto_increment=1;
+alter table roles auto_increment=1;
+alter table usuarios auto_increment=1;
+
+INSERT INTO roles(nombre) VALUES('administrador');
+INSERT INTO roles(nombre) VALUES('cliente');
+
+INSERT INTO usuarios(nombre,correo,password,confirmar,token,id_rls) values('mike','demo@demo.com','111',0,'111',1);
 
 INSERT INTO hoteles(nombre,direccion,telefono,correo) VALUES('H1','D1','1111111111','c1');
 INSERT INTO hoteles(nombre,direccion,telefono,correo) VALUES('H2','D2','2222222222','c2');
