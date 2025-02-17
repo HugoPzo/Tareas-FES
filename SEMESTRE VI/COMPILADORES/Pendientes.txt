@@ -1,0 +1,3 @@
+V4 - Terminar Programa (Reconocer palabras correctamente) %%
+V5 - Detectar Fin de cadena (;) 
+V6 - Combinar el programa V4 con matrices

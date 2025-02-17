@@ -1,0 +1,3 @@
+2 - # Hacer segundo programa del dia 1 (a*(ba)*) %
+3 - # Hacer programa de reconocer una variable (con ascii) %
+4 - # Reconocer palabras por espacio - Con el codigo fuente - Reconocer espacio %

@@ -1,0 +1,7 @@
+vendor_name = ModelSim
+source_file = 1, /home/hugo/Documentos/ESCUELA/SEMESTRE VI/SISTEMAS_DIGITALES/PROYECTOS/Proyecto1/Proyecto1.bdf
+source_file = 1, /home/hugo/Documentos/ESCUELA/SEMESTRE VI/SISTEMAS_DIGITALES/PROYECTOS/Proyecto1/db/Proyecto1.cbx.xml
+design_name = Proyecto1
+instance = comp, \pin_name3~output\, pin_name3~output, Proyecto1, 1
+instance = comp, \pin_name2~input\, pin_name2~input, Proyecto1, 1
+instance = comp, \pin_name1~input\, pin_name1~input, Proyecto1, 1
