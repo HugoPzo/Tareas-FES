@@ -1,0 +1,8 @@
+int main() {
+    int x = 10;
+    if (x > y) {
+        print("x es mayor que y");
+    } else {
+        print("y es mayor o igual que x");
+    }
+}

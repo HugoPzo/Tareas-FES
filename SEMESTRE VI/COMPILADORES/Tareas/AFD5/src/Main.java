@@ -1,8 +1,11 @@
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class Main {
@@ -13,20 +16,35 @@ public class Main {
 
         System.out.println("--------------------------------------");
 
-        try(Stream<String> lines = Files.lines(file_entry_path)) {
+        try{
 
-            lines.forEach(line -> {
-                ArrayList<String> lista_palabras = new ArrayList<>();
-                lista_palabras = afd5.getWords(line);
+            BufferedReader reader = Files.newBufferedReader(file_entry_path);
+            StringBuilder stringBuilder = new StringBuilder();
+            String line = null;
+            String ls = System.getProperty("line.separator");
+            while ((line = reader.readLine()) != null) {
+                stringBuilder.append(line);
+                stringBuilder.append(ls);
+            }
 
-                for (String palabra : lista_palabras) {
-                    if(afd5.processWords(palabra)) {
-                        System.out.println("Fin de instruccion: " + palabra);
-                    }
+            stringBuilder.deleteCharAt(stringBuilder.length()-1);
+            reader.close();
 
+            String text = stringBuilder.toString(); // Texto completo en string sin espacios
+
+            List processedText = afd5.processText(text);
+            ArrayList<String> processedTokens = afd5.processTokens(processedText);
+            System.out.println(processedTokens);
+
+            for (String token : processedTokens) {
+                if (afd5.readTokens(token)){
+                    System.out.println(token + " -> " + "Es valido");
+                }else {
+                    System.out.println(token + " -> " + "No es valido");
                 }
+            }
 
-            });
+
 
         }catch (IOException e){
             e.printStackTrace();

@@ -1,0 +1,13 @@
+64_text 54rew Lo; re.m Ipsum is simply d32_ummy 64t_ext of the pri;53nting and type43setting indu_stry.
+Lorem Ipsum has been the i45_2ndustry's stan; dard dummy text ever since the 1500s,
+when an unknow;n printer took a galley of type and scrambled it to make a type specimen book.
+It has survived not only five centuries, but also the lea;p into electronic typesetting,
+remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset s
+heets containing Lorem Ipsum passages, and more recen; tly with desktop publishing software like A
+ldus PageMaker including vers;ions of Lorem Ipsum. It ; is a long established fact that a reader will be
+distracted by the readable content of a page when looking at its layout. The point of using Lorem
+Ipsum is that it has ; a more-or-less normal distribu; tion of letters, as opposed to using '
+Content here, content here', making it look like readable ; English. Many desktop publis
+hing packages and web page editors now use Lorem Ipsum as their default model text, and a search
+for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolv
+ed over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
