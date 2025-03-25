@@ -1,3 +1,15 @@
 V4 - Terminar Programa (Reconocer palabras correctamente) %%
 V5 - Detectar Fin de cadena (;) 
 V6 - Combinar el programa V4 con matrices
+
+-----------------------------------------------
+Clase 18-03-2025 - Analizador Sintáctico
+Reglas Terminales o No Terminales
+
+Símbolos Inaccesibles o Innecesarios
+
+-----------------------------------------------
+
+Segundo Parcial
+1.- JFlex (flotantes,notacion cientifica, palabras reservadas de java)
+2.- JFlex (flotante,"(",")",+,-,*,/,log,%,^,sqr,=,PI,min,max)

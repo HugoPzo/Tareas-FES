@@ -1,0 +1,26 @@
+PRIMER SEMESTRE
+
+1.- a*ba
+2.- a*(ba)*
+3.- letra,digito,guion bajo
+4.- 3 con split(espacios)
+5.- 4 los siguientes casos
+	(1)
+	sdf sdfs; sdf sdfsdf
+	sdf
+	sdfs;
+	(2)
+	sdf sdfs ; sdf sdfsdf
+	sdf
+	sdfs;
+	(3)
+	sdf sd;fs sdf sdfsdf
+	sdf
+	sdfs ;
+	(4)
+	sdf sd;fs ; sdf sdfsdf
+	sdf ;
+	s;df;s;   
+
+6.- Tabla estatica 
+7.- Tabla dinamica, con el archivo de configuraciòn
