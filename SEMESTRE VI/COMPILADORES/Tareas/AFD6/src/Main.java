@@ -1,29 +1,37 @@
+import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
-
-
     public static void main(String[] args) {
-        AFD6 afd6 = new AFD6();
-        Path file_entry_path =  Paths.get("./test.txt");
 
-        System.out.println("----------------------------------");
+        Path file_path = Paths.get("/home/hugo/Documentos/ESCUELA/SEMESTRE VI/COMPILADORES/Tareas/AFD6/text.txt");
+        StringBuilder inputText = new StringBuilder();
 
-        try(Stream<String> lines = Files.lines(file_entry_path)) {
-            lines.forEach(line -> {
-
-            });
+        try (Scanner scanner = new Scanner(file_path.toFile())) {
+            while (scanner.hasNextLine()) {
+                inputText.append(scanner.nextLine()).append("\n");
+            }
 
         }catch (IOException e){
-            e.printStackTrace();
+            System.out.println("Error reading file" + e.getMessage());
+            return;
         }
 
-        System.out.println("----------------------------------");
+        AFD6 afd6 = new AFD6();
 
+        ArrayList<String> listTokens = afd6.catchTokens(inputText.toString());
+        List<String> tokens = afd6.analyzeTokens(listTokens);
+
+        for (String token : tokens) {
+            System.out.println(token + " - Token");
+        }
 
     }
 }

@@ -1,0 +1,8 @@
+Reconocer numeros flotantes
+Reconocer notacion cientifica
+Reconocer palabras reservadas de Java
+
+
+PARA EJECUTAR EL JAR
+
+`java -jar <nombre-archivo`
