@@ -6,6 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
+
 public class Variable {
 
     private enum State {
@@ -73,3 +74,5 @@ public class Variable {
         return currentState == State.Q1;
     }
 }
+
+

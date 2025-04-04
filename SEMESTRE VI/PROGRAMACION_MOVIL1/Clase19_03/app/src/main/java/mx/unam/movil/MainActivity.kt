@@ -47,14 +47,31 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
             R.id.linear_layout->{
                 startActivity(Intent(this,LinearLayout::class.java))
             }
+            R.id.contraint_layout->{
+                startActivity(Intent(this,ConstraintActivity::class.java))
+            }
+            R.id.nestedscrollview->{
+                startActivity(Intent(this,NestedScrollViewActivity::class.java))
+            }
+            R.id.collapsing->{
+                startActivity(Intent(this,CollapsingToolbarLayout::class.java))
+            }
+            R.id.nestedscrollview->{
+                startActivity(Intent(this,NestedScrollViewActivity::class.java))
+            }
+            R.id.framelayout->{
+                startActivity(Intent(this,FrameLayout::class.java))
+            }
         }
         drawer.closeDrawer(GravityCompat.START)
         return true
     }
+
 }
 

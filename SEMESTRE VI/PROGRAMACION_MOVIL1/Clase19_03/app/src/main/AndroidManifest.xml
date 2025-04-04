@@ -12,23 +12,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Movil"
         tools:targetApi="31">
-
-        <!-- MainActivity (Pantalla de inicio) -->
+        <activity
+            android:name=".ConstraintActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FrameLayout"
+            android:exported="false" />
+        <activity
+            android:name=".NestedScrollViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CollapsingToolbarLayout"
+            android:exported="false" /> <!-- MainActivity (Pantalla de inicio) -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Movil.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- LinearLayout (Segunda pantalla) -->
+        </activity> <!-- LinearLayout (Segunda pantalla) -->
         <activity
             android:name=".LinearLayout"
             android:exported="true" />
-
     </application>
 
 </manifest>

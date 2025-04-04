@@ -8,9 +8,25 @@
             android:title="@string/material_design">
             <menu>
                 <item
+                    android:id="@+id/contraint_layout"
+                    android:icon="@drawable/ic_baseline_description_24"
+                    android:title="@string/constraint_layout" />
+                <item
                     android:id="@+id/linear_layout"
                     android:icon="@drawable/ic_baseline_description_24"
                     android:title="@string/linearlayout" />
+                <item
+                    android:id="@+id/collapsing"
+                    android:icon="@drawable/ic_baseline_description_24"
+                    android:title="@string/collapsingtoolbarlayout" />
+                <item
+                    android:id="@+id/nestedscrollview"
+                    android:icon="@drawable/ic_baseline_description_24"
+                    android:title="@string/nestedscrollview" />
+                <item
+                    android:id="@+id/framelayout"
+                    android:icon="@drawable/ic_baseline_description_24"
+                    android:title="@string/framelayout" />
             </menu>
         </item>
     </group>
